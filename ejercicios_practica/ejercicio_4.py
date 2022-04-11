@@ -14,6 +14,17 @@
 # el nombre de tres invitados
 # def generar_invitados():
 
+def generar_invitados():
+    lista_invitados =[]
+    cantidad_invitados =int(input("Ingrese la cantidad de invitados:"))
+    if cantidad_invitados > 0:
+        for invitado in range(cantidad_invitados):
+            invitado = input("Ingrese el nombre del invitado:\n")
+            lista_invitados.append(invitado)
+    else:
+        print("Ingrese un numero de invitados mayor a cero")
+    return lista_invitados
+
 
 # --------------------------------
 
@@ -41,7 +52,9 @@ if __name__ == '__main__':
     # Luego de crear la función invocarla en este lugar:
 
     # lista_invitados = generar_invitados()
-
+    lista_invitados = generar_invitados()
     # Imprimir en pantalla "lista_invitados":
-
+    print("Su lista de invitados es:", lista_invitados)
     print("terminamos")
+
+
